@@ -3,7 +3,7 @@ import { cr, rgb, asset } from "https://js.sabae.cc/aframe.js";
 const scene = cr("a-scene");
 scene.setAttribute("renderer", "colorManagement: true;");
 document.body.appendChild(scene);
-const aid = asset("./fukuno.glb");
+const aid = asset("https://taisukef.github.io/vr-fukuno/fukuno.glb");
 for (let i = -2; i <= 2; i++) {
   const obj = cr("a-entity", scene);
   obj.setAttribute("gltf-model", aid);
