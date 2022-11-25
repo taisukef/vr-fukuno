@@ -1,0 +1,14 @@
+<script type="module">
+import { cr, rgb, asset } from "https://js.sabae.cc/aframe.js";
+const scene = cr("a-scene");
+scene.setAttribute("renderer", "colorManagement: true;");
+document.body.appendChild(scene);
+const aid = asset("./fukuno.glb");
+for (let i = -2; i <= 2; i++) {
+  const obj = cr("a-entity", scene);
+  obj.setAttribute("gltf-model", aid);
+  const s = Math.pow(2, i / 2);
+  obj.setAttribute("scale", { x: s, y: s, z: s });
+  obj.setAttribute("position", { x: s * 2.7 - 1, y: 0, z: -1 });
+}
+</script>
